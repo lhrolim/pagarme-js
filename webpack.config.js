@@ -4,7 +4,7 @@ module.exports = {
   context: path.join(__dirname, './lib'),
   entry: './index.js',
   devtool: 'source-map',
-  target: 'node',
+  target: 'webworker',
   output: {
     path: __dirname,
     libraryTarget: 'commonjs2',
@@ -32,4 +32,3 @@ module.exports = {
     ],
   },
 }
-
