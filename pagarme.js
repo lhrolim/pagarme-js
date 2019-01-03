@@ -1,3 +1,5 @@
+const self = self ? self : this;
+
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -46,6 +48,8 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -1827,7 +1831,7 @@ module.exports =
 	var errorObj = util.errorObj;
 	var tryCatch = util.tryCatch;
 	function check(self, executor) {
-	    if (self == null || this.constructor !== Promise) {
+	    if (self == null || self.constructor !== Promise) {
 	        throw new TypeError("the promise constructor cannot be invoked directly\u000a\u000a    See http://goo.gl/MqrFmX\u000a");
 	    }
 	    if (typeof executor !== "function") {
@@ -3067,7 +3071,7 @@ module.exports =
 	}
 
 	function domainBind(self, cb) {
-	    return this.bind(cb);
+	    return self.bind(cb);
 	}
 
 	var ret = {
@@ -3224,7 +3228,7 @@ module.exports =
 	    this._trampolineEnabled = true;
 	    var self = this;
 	    this.drainQueues = function () {
-	        this._drainQueues();
+	        self._drainQueues();
 	    };
 	    this._schedule = schedule;
 	}
@@ -4127,7 +4131,7 @@ module.exports =
 	    this._setRejectionIsUnhandled();
 	    var self = this;
 	    setTimeout(function() {
-	        this._notifyUnhandledRejection();
+	        self._notifyUnhandledRejection();
 	    }, 1);
 	};
 
@@ -9261,7 +9265,7 @@ module.exports =
 	//
 	// Return that as the export for use in Webpack, Browserify etc.
 	__webpack_require__(97);
-	module.exports = this.fetch.bind(self);
+	module.exports = self.fetch.bind(self);
 
 
 /***/ },
@@ -9271,7 +9275,7 @@ module.exports =
 	(function(self) {
 	  'use strict';
 
-	  if (this.fetch) {
+	  if (self.fetch) {
 	    return
 	  }
 
@@ -9682,11 +9686,11 @@ module.exports =
 	    return new Response(null, {status: status, headers: {location: url}})
 	  }
 
-	  this.Headers = Headers
-	  this.Request = Request
-	  this.Response = Response
+	  self.Headers = Headers
+	  self.Request = Request
+	  self.Response = Response
 
-	  this.fetch = function(input, init) {
+	  self.fetch = function(input, init) {
 	    return new Promise(function(resolve, reject) {
 	      var request = new Request(input, init)
 	      var xhr = new XMLHttpRequest()
@@ -9727,7 +9731,7 @@ module.exports =
 	      xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
 	    })
 	  }
-	  this.fetch.polyfill = true
+	  self.fetch.polyfill = true
 	})(typeof self !== 'undefined' ? self : this);
 
 
@@ -22079,9 +22083,9 @@ module.exports =
 	  return '[Function' +  name + ']';
 	}
 	function getMessage(self) {
-	  return truncate(inspect(this.actual), 128) + ' ' +
-	         this.operator + ' ' +
-	         truncate(inspect(this.expected), 128);
+	  return truncate(inspect(self.actual), 128) + ' ' +
+	         self.operator + ' ' +
+	         truncate(inspect(self.expected), 128);
 	}
 
 	// At present only the three keys mentioned above are used and
@@ -22566,7 +22570,7 @@ module.exports =
 
 	  var self = this;
 	  strings.forEach(function(s) {
-	    this.writeString(s);
+	    self.writeString(s);
 	  });
 	};
 
@@ -22616,7 +22620,7 @@ module.exports =
 	  this.writeByte(tag);
 	  this.writeLength(bytes.length);
 	  bytes.forEach(function(b) {
-	    this.writeByte(b);
+	    self.writeByte(b);
 	  });
 	};
 
