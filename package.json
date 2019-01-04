@@ -50,5 +50,9 @@
     "ramda": "0.22.1",
     "wait-on": "2.0.2",
     "webpack": "1.13.2"
+  },
+  "dependencies": {
+    "react-native-rsa": "0.0.3",
+    "react-native-rsa-native": "1.0.24"
   }
 }

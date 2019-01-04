@@ -3107,6 +3107,16 @@ rc@~1.1.6:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-native-rsa-native@1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/react-native-rsa-native/-/react-native-rsa-native-1.0.24.tgz#1cac20746b4ab249590c3bd668cd10e7d231ccd8"
+  integrity sha512-9JpWsTbmOUELRTjoxEgpDeATq4ua7pTmO1bSbp+LaYxSu8bDGkDTcvXsDQOohSbAopkPg0OzreMpBLwZCcFTyw==
+
+react-native-rsa@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-rsa/-/react-native-rsa-0.0.3.tgz#c3b5b85278e8a1a3ef22b4206a7d6aa04a26d99b"
+  integrity sha1-w7W4UnjooaPvIrQgan1qoEom2Zs=
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
